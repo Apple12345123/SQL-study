@@ -11,7 +11,8 @@ GRANT ALL PRIVILEGES ON world.* TO 'admin_user'@'%';
 CREATE USER 'dev_user'@'%' IDENTIFIED BY '45678';
 GRANT SELECT, INSERT, UPDATE ON sakila.actor TO 'dev_user'@'%';
 
--- 문제 4: 'guest_user'라는 사용자를 생성하고, 'world' 데이터베이스의 'city' 테이블에 대한 SELECT 권한을 부여하세요. 이 사용자는 손님 역할을 수행하며, 'city' 테이블에서 데이터를 조회할 수만 있어야 합니다.
+-- 문제 4: 'guest_user'라는 사용자를 생성하고, 'world' 데이터베이스의 'city' 테이블에 대한 SELECT 권한을 부여하세요. 
+-- 이 사용자는 손님 역할을 수행하며, 'city' 테이블에서 데이터를 조회할 수만 있어야 합니다.
 CREATE USER 'guest_user'@'%' IDENTIFIED BY '56789';
 GRANT SELECT ON word.city TO 'guest_user'@'%';
 
