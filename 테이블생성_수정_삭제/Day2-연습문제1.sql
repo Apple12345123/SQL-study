@@ -30,14 +30,16 @@ SELECT * FROM Books;  -- 표에 기입이 안됨....
     - **`Email`** 열에는 고유 제약조건을 추가하고, **`FirstName`** 및 **`LastName`** 열은 빈 문자열을 허용하지 않아야 합니다.
 */
 CREATE TABLE Members (
-	 MemberID INT AUTO_INCREMENT PRIMARY KEY,
-     FirstName VARCHAR(255) NOT NULL, -- 필수
-     LastName VARCHAR(255) NOT NULL, -- 필수
-     Email VARCHAR(255) NOT NULL UNIQUE, -- 필수, 고유
-     MembershipDate DATE DEFAULT (CURRENT_DATE)
-     CHECK (FirstName != ''),
-     CHECK (LastName != '')
+	MemberID INT PRIMARY KEY AUTO_INCREMENT,
+    FirstName VARCHAR(255) NOT NULL,
+    LastName VARCHAR(255) NOT NULL,
+    Email VARCHAR(255) NOT NULL UNIQUE,
+    MembershipDate DATE DEFAULT (CURRENT_DATE),
+    CHECK (FirstName != ''),
+    CHECK (LastName != '')
 );
+DESCRIBE Members;
+SELECT * FROM Members;
 /* **문제 3:** **`BorrowRecords`** 테이블을 생성하세요. 이 테이블은 **`Members`**와 **`Books`** 테이블에 대한 외래 키 제약 조건을 포함해야 합니다.
 3. **BorrowRecords 테이블**: 도서 대출 기록을 저장합니다.
     - **`RecordID`** (정수형, 기본 키, 자동 증가): 대출 기록의 고유 번호입니다.
