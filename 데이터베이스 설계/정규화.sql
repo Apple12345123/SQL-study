@@ -214,11 +214,3 @@ SELECT e.StudentId, i.InstructorName, i.CourseName
 FROM Enroll e JOIN Instructor i ON e.InstructorName = i.InstructorName;
 
 
-
-
-
-
-
-
-
-
