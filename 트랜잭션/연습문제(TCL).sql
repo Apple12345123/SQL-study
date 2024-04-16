@@ -21,9 +21,6 @@ SELECT * FROM products;
 - 'Phone'의 재고를 5개 감소시키세요
 - 트랜잭션을 커밋하여 변경사항을 확정하세요.
 */
-UPDATE products
-	SET price = price * 1.1 
-	WHERE product_name 'Laptop', 'Phone', 'Tablet';
 
 /*
 연습문제 2: SAVEPOINT와 ROLLBACK
