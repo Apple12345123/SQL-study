@@ -46,3 +46,10 @@ CREATE TABLE covid19_max(
 );
 
 SELECT * FROM covid19_max;
+
+SELECT * FROM covid19_max WHERE iso_code = "kor";
+
+SELECT count(*) FROM covid19_max;  -- 등록된 행 개수
+
+-- 중복을 제거한 iso_code column의 개수 출력
+SELECT count(DISTINCT iso_code) FROM covid19;
